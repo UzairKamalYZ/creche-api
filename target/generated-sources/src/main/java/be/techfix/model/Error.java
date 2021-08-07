@@ -12,7 +12,7 @@ import javax.validation.constraints.*;
  * Error
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-08-07T19:46:23.535+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-08-07T21:48:14.770+02:00[Europe/Paris]")
 
 
 public class Error   {

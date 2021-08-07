@@ -145,27 +145,13 @@
 
     </dependencies>
     <properties>
-    <maven-jgitflow-plugin.version>1.8.0</maven-jgitflow-plugin.version>
-    <jersey-version>2.22.2</jersey-version>
-    <jackson-version>2.6.7</jackson-version>
-    <jodatime-version>2.7</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <jetty-version>9.2.9.v20150224</jetty-version>
-    <jersey2-version>2.22.2</jersey2-version>
     <junit-version>4.12</junit-version>
-    <logback-version>1.1.7</logback-version>
-    <servlet-api-version>2.5</servlet-api-version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jersey-common.version>2.24</jersey-common.version>
-    <swagger.version>2.0.7</swagger.version>
-    <migbase64.version>2.2</migbase64.version>
-    <swagger-codegen.version>3.0.7</swagger-codegen.version>
     <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
     <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
     <maven-bundle-plugin.version>3.5.0</maven-bundle-plugin.version>
-    <swagger-codegen-jaxrs-spec.version>1.0.0</swagger-codegen-jaxrs-spec.version>
     </properties>
 </project>
