@@ -1,0 +1,87 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Api for creche",
+    "version": "1.0.0",
+    "title": "Creche",
+    "termsOfService": "http://www.uzairkamal.wordpress.co",
+    "contact": {
+      "email": "uzairkamal@yahoo.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags": [
+    {
+      "name": "Baby",
+      "description": "Everything about your Baby"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/baby/{id}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "requestId",
+            "description": "Help in tracing request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+              "type": "string",
+
+            "description": "Baby identifier"
+          }
+        ],
+        "summary": "create request for baby",
+        "description": "Get Baby details for respective identifier.",
+        "tags": [
+          "baby"
+        ],
+        "operationId": "getBaby",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/BabyDetails"
+          },
+          "400": {
+            "$ref": "#/definitions/Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "BabyDetails": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "name of baby"
+        },
+        "age": {
+          "type": "string",
+          "description": "age of baby"
+        }
+      }
+    },
+    "Error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Error code"
+        }
+      }
+    }
+  }
+}

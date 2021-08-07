@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Creche system API
+  termsOfService: 'http://www.github.com/kongchen/swagger-maven-plugin'
+  contact:
+    name: Creche system support
+    url: 'http://www.uzairkamal.wordpress.com'
+    email: uzairkamal@yahoo.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  description: Creche system API
+tags:
+  - name: Baby
+paths:
+  /baby/{babyId}:
+    get:
+      parameters:
+        - in: path
+          name: babyId
+          required: true
+          schema:
+            type: string
+          description: Identifier for baby.
+      summary: create request for baby.
+      description: >-
+        Get Baby details for respective identifier.
+      tags:
+        - Baby
+      operationId: getBaby
+      responses:
+        '200':
+          description: >-
+            Baby details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BabyDetails'
+        '404':
+          description: default schema for errors
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    BabyDetails:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of baby
+        age:
+          type: string
+          description: Age of baby.
+
+    Error:
+      type: object
+      properties:
+        code:
+          description: Code associated to the error.
+          type: string
+        title:
+          description: Message returned in case of error.
+          type: string
+
